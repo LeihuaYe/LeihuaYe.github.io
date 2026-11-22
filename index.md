@@ -8,6 +8,18 @@ description: Leihua Ye, PhD. Data Science in Silicon Valley. Experimentation, ca
 
 <p class="lead">I help data teams make trustworthy decisions with experimentation, causal inference, and AI.</p>
 
+<ul class="creds">
+  <li>PhD, UC Santa Barbara</li>
+  <li>10+ years in research and industry</li>
+  <li>Towards Data Science author</li>
+  <li>Open-source builder</li>
+</ul>
+
+<div class="hero-cta">
+  <a class="button" href="https://techvalley.substack.com/subscribe">Get the free newsletter</a>
+  <span class="quiet">Experimentation and career lessons, every other Thursday.</span>
+</div>
+
 > Running tests is easy; running trustworthy tests is hard.
 
 I'm a senior data scientist working on experimentation at scale: variance reduction, sequential testing, and statistical consulting for product teams. Before industry, I earned a PhD from UC Santa Barbara, where I used causal inference to study policy. I write about what I learn so others can skip the mistakes I made.

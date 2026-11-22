@@ -28,3 +28,5 @@ Outside work, I run marathons, hike, travel, and read.
 ## Contact
 
 Email me at [yeleihua@gmail.com](mailto:yeleihua@gmail.com), or connect on [LinkedIn](https://www.linkedin.com/in/leihuaye/).
+
+{% include subscribe.html %}

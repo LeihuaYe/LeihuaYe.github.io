@@ -3,20 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title and page.url != "/" %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
-  <meta property="og:title" content="{% if page.title and page.url != "/" %}{{ page.title }} · {% endif %}{{ site.title }}">
-  <meta property="og:description" content="{{ page.description | default: site.description }}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:type" content="website">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% seo %}
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
   <header class="site-header">
     <a class="site-name" href="{{ '/' | relative_url }}">Leihua Ye</a>
     <nav>
-      {% for item in site.nav %}<a href="{{ item.url | relative_url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>{% endfor %}
+      {% for item in site.nav %}{% if item.needs_notes and site.notes.size == 0 %}{% continue %}{% endif %}<a href="{{ item.url | relative_url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>{% endfor %}
+      <a class="nav-cta" href="https://techvalley.substack.com/subscribe">Subscribe</a>
     </nav>
   </header>
   <main>

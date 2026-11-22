@@ -29,8 +29,23 @@ nav:
     url: /tools/
   - title: Notes
     url: /notes/
+    needs_notes: true
   - title: About
     url: /about/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+author: Leihua Ye
+social:
+  name: Leihua Ye
+  links:
+    - https://www.linkedin.com/in/leihuaye/
+    - https://github.com/LeihuaYe
+    - https://leihua-ye.medium.com
+    - https://techvalley.substack.com
+    - https://scholar.google.com/citations?user=s_OeV6UAAAAJ
 
 exclude:
   - README.md
