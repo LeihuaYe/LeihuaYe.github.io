@@ -1,0 +1,36 @@
+title: Leihua Ye, PhD
+tagline: Data Science in Silicon Valley
+description: Experimentation, causal inference, and building with AI. Running tests is easy; running trustworthy tests is hard.
+url: https://leihuaye.github.io
+email: yeleihua@gmail.com
+markdown: kramdown
+permalink: pretty
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:title/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+
+nav:
+  - title: Writing
+    url: /writing/
+  - title: Tools
+    url: /tools/
+  - title: Notes
+    url: /notes/
+  - title: About
+    url: /about/
+
+exclude:
+  - README.md

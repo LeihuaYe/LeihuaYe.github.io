@@ -1,0 +1,22 @@
+---
+title: Notes
+description: Short notes by Leihua Ye on things learned in experimentation, statistics, and AI.
+permalink: /notes/
+---
+
+<h1>Notes</h1>
+
+<p>Short notes on things I learned this week: a method, a paper, a bug, a tool.</p>
+
+{% assign notes = site.notes | sort: "date" | reverse %}
+{% if notes.size > 0 %}
+<ul>
+  {% for note in notes %}
+  <li><a href="{{ note.url | relative_url }}">{{ note.title }}</a> <span class="quiet">· {{ note.date | date: "%b %-d, %Y" }}</span></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="quiet">The first notes are coming soon.</p>
+{% endif %}
+
+{% include subscribe.html %}

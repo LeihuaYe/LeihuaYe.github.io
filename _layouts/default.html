@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-name" href="{{ '/' | relative_url }}">Leihua Ye</a>
+    <nav>
+      {% for item in site.nav %}<a href="{{ item.url | relative_url }}"{% if page.url contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>{% endfor %}
+    </nav>
+  </header>
+  <main>
+{{ content }}
+  </main>
+  <footer class="site-footer">
+    <p>
+      <a href="mailto:{{ site.email }}">Email</a> ·
+      <a href="https://www.linkedin.com/in/leihuaye/">LinkedIn</a> ·
+      <a href="https://github.com/LeihuaYe">GitHub</a> ·
+      <a href="https://leihua-ye.medium.com">Medium</a> ·
+      <a href="https://techvalley.substack.com">Tech Valley</a> ·
+      <a href="https://scholar.google.com/citations?user=s_OeV6UAAAAJ">Scholar</a>
+    </p>
+    <p class="quiet">© {{ site.time | date: "%Y" }} Leihua Ye. Views are my own.</p>
+  </footer>
+</body>
+</html>
